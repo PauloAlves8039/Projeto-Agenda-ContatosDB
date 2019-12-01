@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendaContatos.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,27 @@ namespace AgendaContatos
 {
     public partial class FrmAdicionarAlterar : Form
     {
-        public FrmAdicionarAlterar()
+        private Contato contato;
+
+        public FrmAdicionarAlterar(Contato contato = null)
         {
+            this.contato = contato;
             InitializeComponent();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

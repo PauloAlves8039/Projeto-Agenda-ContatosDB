@@ -67,15 +67,15 @@
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.statusStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 279);
+            this.panel1.Location = new System.Drawing.Point(0, 242);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(516, 119);
+            this.panel1.Size = new System.Drawing.Size(584, 119);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(236, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 50);
             this.pictureBox1.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(516, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(584, 39);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -106,6 +106,7 @@
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(36, 36);
             this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -120,6 +121,7 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(36, 36);
             this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -134,6 +136,7 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(36, 36);
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSair
             // 
@@ -144,6 +147,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(36, 36);
             this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // statusStrip1
             // 
@@ -156,7 +160,7 @@
             this.toolStripStatusLabel5});
             this.statusStrip1.Location = new System.Drawing.Point(0, 97);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(516, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(584, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -201,18 +205,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(516, 279);
+            this.panel2.Size = new System.Drawing.Size(584, 242);
             this.panel2.TabIndex = 1;
             // 
             // dgvAgenda
             // 
+            this.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvAgenda.BackgroundColor = System.Drawing.Color.White;
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAgenda.GridColor = System.Drawing.Color.Gray;
-            this.dgvAgenda.Location = new System.Drawing.Point(13, 13);
+            this.dgvAgenda.Location = new System.Drawing.Point(0, 0);
+            this.dgvAgenda.MultiSelect = false;
             this.dgvAgenda.Name = "dgvAgenda";
             this.dgvAgenda.ReadOnly = true;
-            this.dgvAgenda.Size = new System.Drawing.Size(491, 243);
+            this.dgvAgenda.Size = new System.Drawing.Size(584, 242);
             this.dgvAgenda.TabIndex = 0;
             // 
             // FrmAgenda
@@ -220,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(516, 398);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -230,6 +237,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda de Contatos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAgenda_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAgenda_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
