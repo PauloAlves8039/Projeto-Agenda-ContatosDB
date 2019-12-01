@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\ContatoDao.cs" />
+    <Compile Include="Dao\ContatoUtils.cs" />
     <Compile Include="Entities\Contato.cs" />
     <Compile Include="FrmAdicionarAlterar.cs">
       <SubType>Form</SubType>
@@ -99,7 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dao\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
