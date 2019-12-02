@@ -128,7 +128,7 @@
             this.mktTelefone.Location = new System.Drawing.Point(87, 103);
             this.mktTelefone.Mask = "#########";
             this.mktTelefone.Name = "mktTelefone";
-            this.mktTelefone.Size = new System.Drawing.Size(100, 23);
+            this.mktTelefone.Size = new System.Drawing.Size(60, 23);
             this.mktTelefone.TabIndex = 5;
             // 
             // txtEmail

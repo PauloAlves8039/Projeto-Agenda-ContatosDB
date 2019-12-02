@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data;
-using System.Data.SqlClient;
 using AgendaContatos.Entities;
 using AgendaContatos.Dao;
 
@@ -17,7 +16,7 @@ namespace AgendaContatos
         private void timer1_Tick(object sender, EventArgs e)
         {
             toolStripStatusLabel3.Text = DateTime.Now.ToShortDateString();
-            toolStripStatusLabel5.Text = DateTime.Now.ToShortTimeString();
+            toolStripStatusLabel5.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void FrmAgenda_FormClosed(object sender, FormClosedEventArgs e)
@@ -71,6 +70,11 @@ namespace AgendaContatos
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Agenda de Contatos 1.0 \nDesenvolvido por: Paulo Alves", "Sobre");
         }
     }
 }
